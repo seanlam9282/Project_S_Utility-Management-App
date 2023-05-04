@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UtilityManagement.Setting.UpdateUtility"
+             Title="Setting: Update Utility">
+
+    <ScrollView>
+        <Grid Padding="30, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="120"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+
+            <VerticalStackLayout>
+                <Picker x:Name="Picker"
+                        Title="Select Appartment">
+                    <Picker.Items>
+                        <x:String>Appartment 101</x:String>
+                        <x:String>Appartment 102</x:String>
+                        <x:String>Appartment 103</x:String>
+                        <x:String>Appartment 104</x:String>
+                        <x:String>Appartment 105</x:String>
+                        <x:String>Appartment 106</x:String>
+                        <x:String>Appartment 107</x:String>
+                        <x:String>Appartment 108</x:String>
+                    </Picker.Items>
+                    <Picker.SelectedIndex>0</Picker.SelectedIndex>
+                </Picker>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Button x:Name="SelectButton"
+                        Text="Go"
+                        WidthRequest="50"
+                        HorizontalOptions="Start"
+                        Margin="0, 60"
+                        Clicked="Go"/>
+            </VerticalStackLayout>
+
+            <Label 
+                    Text="New Rent"
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="28"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="End" 
+                    Grid.Row="1"
+                    Grid.Column="0"/>
+            <Entry 
+                    x:Name="Rent" 
+                    FontSize="28"
+                    HeightRequest="50" 
+                    WidthRequest="300"
+                    HorizontalOptions="Start"
+                    Grid.Row="1" 
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"/>
+
+            <Label 
+                    Text="New Water And Laundry"
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="28"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="End" 
+                    Grid.Row="2"
+                    Grid.Column="0"/>
+            <Entry 
+                    x:Name="WaterLaundry" 
+                    FontSize="28"
+                    HeightRequest="50" 
+                    WidthRequest="300"
+                    HorizontalOptions="Start"
+                    Grid.Row="2" 
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"/>
+        </Grid>
+    </ScrollView>
+</ContentPage>

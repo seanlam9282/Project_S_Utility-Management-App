@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UtilityManagement.Utility.Utility107"
+             Title="Utility107">
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Row 0 - Calculating period(Using day of the move -in date(ie.25 - 10 - 2023 to 25 - 11 - 2023-->
+            <Label 
+                Text="Tenant Name"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="40"
+                VerticalOptions="Center" 
+                HorizontalOptions="End" 
+                Grid.Row="0"
+                Grid.Column="0"/>
+            <Label 
+                x:Name="TenantName" 
+                FontSize="40"
+                HeightRequest="50" 
+                WidthRequest="300"
+                HorizontalOptions="End"
+                Grid.Row="0" 
+                Grid.Column="1" 
+                Grid.ColumnSpan="2"/>
+
+            <!--Row 1 - Rent-->
+            <Label 
+                Text="Rent"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="40"
+                VerticalOptions="Center" 
+                HorizontalOptions="End" 
+                Grid.Row="1"
+                Grid.Column="0"/>
+            <Label
+                x:Name="Rent" 
+                FontSize="40"
+                HeightRequest="50" 
+                WidthRequest="300"
+                HorizontalOptions="End"
+                Grid.Row="1" 
+                Grid.Column="1"
+                Grid.ColumnSpan="2"/>
+
+
+            <!--Row 2 - Fixed water supply and laundry-->
+            <Label 
+                Text="Water And Laundry"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="40"
+                VerticalOptions="Center" 
+                HorizontalOptions="End" 
+                Grid.Row="2"
+                Grid.Column="0"/>
+            <Label 
+                x:Name="WaterLaundry" 
+                FontSize="40"
+                HeightRequest="50" 
+                WidthRequest="300"
+                HorizontalOptions="End"
+                Grid.Row="2" 
+                Grid.Column="1"
+                Grid.ColumnSpan="2"/>
+
+            <!--Row 3 - Last month electricity record-->
+            <Label 
+                Text="Pre Electricity Read"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="40"
+                VerticalOptions="Center" 
+                HorizontalOptions="End" 
+                Grid.Row="3"
+                Grid.Column="0"/>
+            <Label
+                x:Name="LastElectricity"
+                FontSize="40"
+                HeightRequest="50" 
+                WidthRequest="200"
+                HorizontalOptions="End"
+                Grid.Row="3" 
+                Grid.Column="1"
+                Grid.ColumnSpan="1"/>
+            <Entry 
+                x:Name="NewElectricity"
+                FontSize="40"
+                Placeholder="New Reading"
+                HeightRequest="50" 
+                WidthRequest="200"
+                HorizontalOptions="End"
+                Grid.Row="3" 
+                Grid.Column="2"
+                Grid.ColumnSpan="1"/>
+
+            <!--Row 4 - Electricity cost-->
+            <Label 
+                Text="Electricity Cost"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="40"
+                VerticalOptions="Center" 
+                HorizontalOptions="End" 
+                Grid.Row="4"
+                Grid.Column="0"/>
+            <Label
+                x:Name="ElectricityCost"
+                FontSize="40"
+                HeightRequest="50" 
+                WidthRequest="300"
+                HorizontalOptions="End"
+                Grid.Row="4" 
+                Grid.Column="1"
+                Grid.ColumnSpan="2"/>
+
+            <!--Row 5 Left - Total Amount Due-->
+            <Label 
+                Text="Total Ammount"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="40"
+                VerticalOptions="Center" 
+                HorizontalOptions="End" 
+                Grid.Row="5"
+                Grid.Column="0"/>
+            <Label
+                x:Name="TotalAmmount" 
+                FontSize="40"
+                HeightRequest="50" 
+                WidthRequest="300"
+                HorizontalOptions="End"
+                Grid.Row="5" 
+                Grid.Column="1"
+                Grid.ColumnSpan="2"/>
+
+            <!--Row 5 Right - Generate message button-->
+            <Button 
+                x:Name="GenerateSMS" 
+                FontSize="20"
+                Text="Calculate And Generate SMS"
+                HeightRequest="50"
+                WidthRequest="300"
+                HorizontalOptions="Center"
+                Grid.Row="5" 
+                Grid.Column="3"
+                Clicked="Calculation"/>
+
+            <!--SMS Generate Box-->
+            <Label
+                FontAttributes="Bold"
+                FontSize="17"
+                FontFamily="Courier New"
+                x:Name="SmS"
+                HeightRequest="400" 
+                WidthRequest="500"
+                HorizontalOptions="Start"
+                Grid.Row="0"
+                Grid.RowSpan="5"
+                Grid.Column="3"
+                Grid.ColumnSpan="0"
+            />
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UtilityManagement.Setting.UpdateAppartment"
+             Title="Setting: Update Appartment">
+
+    <ScrollView>
+        <Grid Padding="30, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+            
+            <VerticalStackLayout>
+                <Picker x:Name="Picker"
+                    Title="Select Appartment">
+                    <Picker.Items>
+                        <x:String>Appartment 101</x:String>
+                        <x:String>Appartment 102</x:String>
+                        <x:String>Appartment 103</x:String>
+                        <x:String>Appartment 104</x:String>
+                        <x:String>Appartment 105</x:String>
+                        <x:String>Appartment 106</x:String>
+                        <x:String>Appartment 107</x:String>
+                        <x:String>Appartment 108</x:String>
+                    </Picker.Items>
+                    <Picker.SelectedIndex>0</Picker.SelectedIndex>
+                </Picker>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Button x:Name="SelectButton"
+                        Text="Go"
+                        WidthRequest="50"
+                        HorizontalOptions="Start"
+                        Margin="0, 60"
+                        Clicked="Go"/>
+            </VerticalStackLayout>
+
+            <Label 
+                    Text="New Tenant Name"
+                    SemanticProperties.HeadingLevel="Level2"
+                    FontSize="28"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="End" 
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    HorizontalTextAlignment="End"/>
+            <Entry 
+                    x:Name="TenantName" 
+                    FontSize="28"
+                    Grid.Row="1" 
+                    Grid.Column="2" 
+                    HeightRequest="50" 
+                    WidthRequest="300"
+                    HorizontalOptions="Start"/>
+
+            <Label 
+                    Text="New Move-In Date"
+                    SemanticProperties.HeadingLevel="Level2"
+                    FontSize="28"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="End" 
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    HorizontalTextAlignment="End"/>
+            <Entry 
+                    x:Name="MoveInDate" 
+                    FontSize="28"
+                    Grid.Row="2" 
+                    Grid.Column="2" 
+                    HeightRequest="50" 
+                    WidthRequest="300"
+                    HorizontalOptions="Start"/>
+
+
+            <Label 
+                    Text="New Phone Number"
+                    SemanticProperties.HeadingLevel="Level2"
+                    FontSize="28"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="End" 
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    HorizontalTextAlignment="End"/>
+            <Entry 
+                    x:Name="PhoneNumber" 
+                    FontSize="28"
+                    Grid.Row="3" 
+                    Grid.Column="2" 
+                    HeightRequest="50" 
+                    WidthRequest="300"
+                    HorizontalOptions="Start"/>
+
+            <Label 
+                    Text="New Deposit Amount"
+                    SemanticProperties.HeadingLevel="Level2"
+                    FontSize="28"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="End"
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    HorizontalTextAlignment="End"/>
+            <Entry 
+                    x:Name="Deposit" 
+                    FontSize="28"
+                    Grid.Row="4" 
+                    Grid.Column="2" 
+                    HeightRequest="50" 
+                    WidthRequest="300"
+                    HorizontalOptions="Start"/>
+
+            <Button x:Name="UpdateButton"
+                    Text="Update"
+                    Grid.Row="5" 
+                    Grid.Column="2"
+                    HeightRequest="50" 
+                    WidthRequest="100"
+                    HorizontalOptions="Start"
+                    Clicked="Update"/>
+        </Grid>
+    </ScrollView>
+</ContentPage>

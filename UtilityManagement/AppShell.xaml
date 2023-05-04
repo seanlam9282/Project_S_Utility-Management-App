@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="UtilityManagement.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:appartment="clr-namespace:UtilityManagement.Appartment"
+    xmlns:utility="clr-namespace:UtilityManagement.Utility"
+    xmlns:setting="clr-namespace:UtilityManagement.Setting"
+    Shell.FlyoutBehavior="Disabled">
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Appartment"
+             Icon="appartment.png">
+            <ShellContent Title="Appartment101"
+                          Icon="appartment.png"
+                          ContentTemplate="{DataTemplate appartment:Appartment101}" />
+            <ShellContent Title="Appartment102"
+                          Icon="appartment.png"
+                          ContentTemplate="{DataTemplate appartment:Appartment102}" />
+            <ShellContent Title="Appartment103"
+                          Icon="appartment.png"
+                          ContentTemplate="{DataTemplate appartment:Appartment103}" />
+            <ShellContent Title="Appartment104"
+                          Icon="appartment.png"
+                          ContentTemplate="{DataTemplate appartment:Appartment104}" />
+            <ShellContent Title="Appartment105"
+                          Icon="appartment.png"
+                          ContentTemplate="{DataTemplate appartment:Appartment105}" />
+            <ShellContent Title="Appartment106"
+                          Icon="appartment.png"
+                          ContentTemplate="{DataTemplate appartment:Appartment106}" />
+            <ShellContent Title="Appartment107"
+                          Icon="appartment.png"
+                          ContentTemplate="{DataTemplate appartment:Appartment107}" />
+            <ShellContent Title="Appartment108"
+                          Icon="appartment.png"
+                          ContentTemplate="{DataTemplate appartment:Appartment108}" />
+        </Tab>
+
+        <Tab Title="Utility"
+             Icon="utility.png">
+            <ShellContent Title="Appartment1"
+                          Icon="appartment.png"
+                          ContentTemplate="{DataTemplate utility:Utility101}" />
+            <ShellContent Title="Appartment2"
+                          Icon="appartment.png"
+                          ContentTemplate="{DataTemplate utility:Utility102}" />
+            <ShellContent Title="Appartment3"
+                          Icon="appartment.png"
+                          ContentTemplate="{DataTemplate utility:Utility103}" />
+            <ShellContent Title="Appartment4"
+                          Icon="appartment.png"
+                          ContentTemplate="{DataTemplate utility:Utility104}" />
+            <ShellContent Title="Appartment5"
+                          Icon="appartment.png"
+                          ContentTemplate="{DataTemplate utility:Utility105}" />
+            <ShellContent Title="Appartment6"
+                          Icon="appartment.png"
+                          ContentTemplate="{DataTemplate utility:Utility106}" />
+            <ShellContent Title="Appartment7"
+                          Icon="appartment.png"
+                          ContentTemplate="{DataTemplate utility:Utility107}" />
+            <ShellContent Title="Appartment8"
+                          Icon="appartment.png"
+                          ContentTemplate="{DataTemplate utility:Utility108}" />
+        </Tab>
+
+        <Tab Title="Setting"
+             Icon="setting.png">
+            <ShellContent Title="Update Appartment"
+                          Icon="setting.png"
+                          ContentTemplate="{DataTemplate setting:UpdateAppartment}" />
+            <ShellContent Title="Update Utility"
+                          Icon="setting.png"
+                          ContentTemplate="{DataTemplate setting:UpdateUtility}" />
+        </Tab>
+    </FlyoutItem>
+</Shell>

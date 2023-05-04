@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/UtilityManagement/FileContentIndex
+/UtilityManagement/bin/Debug/net7.0-windows10.0.19041.0/win10-x64/AppX/mscordbi.dll
+/UtilityManagement/obj/project.assets.json
